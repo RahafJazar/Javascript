@@ -1,0 +1,224 @@
+<!-- Q1 Sol :Code One ,this might not work as expected because the element hasn't been fully loaded by the time this script is executed since the script is in head tag and head tag execute before body tag 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Learn JavaScript</title>
+    <script>
+      // Code One
+      document.getElementById("el").style.color = "red";
+    </script>
+    <script>
+      // Code Two
+      window.onload = function () {
+        document.getElementById("el").style.color = "red";
+      };
+    </script>
+  </head>
+  <body>
+    <h1 id="el">Page Title</h1>
+    <script>
+      // Code Three
+      document.getElementById("el").style.color = "red";
+    </script>
+  </body>
+</html> -->
+<!------------------------------------------------------------------------------------------------------------------------------------------>
+
+<!-- Q2 : 
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Learn JavaScript</title>
+</head>
+
+<body>
+    <h1 id="Course">
+        Elzero
+    </h1>
+    <script>
+        document.getElementById("Course").style.color = "blue";
+        document.getElementById("Course").style.fontSize = "80px";
+        document.getElementById("Course").style.fontWeight = "bold";
+        document.getElementById("Course").style.textAlign = "center";
+        document.getElementById("Course").style.fontFamily = "Arial";
+
+
+    </script>
+</body>
+
+</html> -->
+
+
+<!---------------------------------------------------------------------------------------------------------------------------------->
+
+<!-- Q3
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Learn JavaScript</title>
+    <script>
+        window.onload = function () {
+            console.log(`%c ${document.getElementById("Elzero").innerHTML}  %c ${document.getElementById("Web").innerHTML} %c ${document.getElementById("School").innerHTML}`,
+                "color:Red; font-size:40px;", //first element 
+                "color:green; font-size:40px;font-weight:bold;",//second element 
+                "color:white; font-size:40px; background-color:blue;"  //third element
+            )
+        }
+    </script>
+</head>
+
+<body>
+    <h1 id="Elzero">Elzero</h1>
+    <h1 id="Web"> Web </h1>
+    <h1 id="School">School</h1>
+
+
+
+     <script>
+    console.log(`%c ${document.getElementById("Elzero").innerHTML}`, "color:Red; font-size:40px;")
+        console.log(`%c ${document.getElementById("Web").innerHTML}`, "color:green; font-size:40px;font-weight:bold;")
+        console.log(`%c ${document.getElementById("School").innerHTML}`, "color:white; font-size:40px; background-color:blue;")
+    </script>
+</body>
+
+</html> -->
+
+
+<!----------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+<!-- Q4 
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Learn JavaScript</title>
+    <script>
+        window.onload = function () {
+            console.group("Group1")
+            console.log("Message one ")
+            console.log("Message Two")
+
+            console.group("Child Group ")
+            console.log("Message one ")
+            console.log("Message Two")
+            console.groupEnd()
+
+            console.group("Grand Child Group")
+            console.log("Message one ")
+            console.log("Message Two")
+            console.groupEnd()
+
+            console.groupEnd()
+
+            console.group("Group2")
+            console.log("Message one ")
+            console.log("Message Two")
+            console.groupEnd()
+        }
+    </script>
+</head>
+
+<body>
+
+
+</body>
+
+</html> -->
+
+<!-------------------------------------------------------------------------------------------->
+
+<!-- Q5
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Learn JavaScript</title>
+
+    <script>
+        window.onload = function () {
+            let names = ["Elzero", "Ahmad", "Sameh", "Gamal", "Aya"];
+            console.table(names)
+
+
+            console.log("----------------------------------------------------------")
+
+            let users = [
+                { "name": "aya", "age": 23, "major": "IT" },
+                { "name": "Alaa", "age": 24, "major": "Engineering" },
+                { "name": "Farah", "age": 23, "major": "Science" },
+                { "name": "Dana", "age": 22, "major": "Medicine" },
+
+            ]
+            console.table(users)
+
+            console.log("++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+            console.table(users, ["name", "major"])
+
+
+            console.log("___________________________________________________________")
+            //dispaly nested data 
+            let students = [
+                { "name": "Doaa", details: { "age": 23, "major": "IT" } },
+                { "name": "samar", details: { "age": 24, "major": "Engineering" } },
+                { "name": "Jamal", details: { "age": 23, "major": "Science" } },
+            ]
+
+            console.table(students.map((student => ({
+                name: student.name,
+                age: student.details.age,
+                major: student.details.major,
+
+            }))))
+        }
+    </script>
+</head>
+
+<body>
+
+
+</body>
+
+</html> -->
+
+<!------------------------------------------------------------------------------->
+
+<!-- Q6
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Learn JavaScript</title>
+
+
+    <script>
+
+
+        /* way1*/
+        //تعطيل تنفيذ console.log 
+        console.log = function () { }
+        //تعطيل تنفيذ console.write
+        document.write = function () { }
+
+
+
+        console.log("I am in console")
+        document.write("I am in page")
+    </script>
+</head>
+
+<body>
+
+
+</body>
+
+</html> -->
