@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        window.onload = function () {
+            let a = 1_00;
+            let b = 2_00.5;
+            let c = 1e2;
+            let d = 2.4;
+
+            //challeng1.1
+            console.log(parseInt(Math.min(a, b, c, d)))
+
+            //challenge1.2
+            console.log(Math.pow(a, parseInt(d)))
+
+            //challenge1.3
+            console.log(parseInt(d))
+            console.log(Math.round(d))
+            console.log(Math.floor(d))
+            console.log(d.toFixed())
+
+
+            //challenge1.4
+            console.log()
+
+            let courseName = "Elzero Web School";
+            //challeng2.1
+            console.log(courseName.charAt(2).toUpperCase() + courseName.slice(3, 6))
+            //challeng2.2
+            console.log(courseName.charAt(13).toUpperCase().repeat(8))
+            //challeng2.3
+            console.log(courseName.split(" ", 1))
+            //challeng2.4
+            console.log(courseName.substr(0, 6) + courseName.substr(-7))
+            //challeng2.5
+            console.log(courseName.substr(0, 6) + courseName.substr(-7))
+            //challeng2.5
+            console.log(courseName.charAt(0).toLowerCase() + courseName.slice(1, courseName.length - 1).toUpperCase() + courseName.charAt(courseName.length - 1).toLowerCase())
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
